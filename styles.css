@@ -1,0 +1,155 @@
+/* Base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes at least the full height of the viewport */
+}
+
+header {
+  background-color: #402f14;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header-background {
+  background-image: url('images/banner.jpeg'); /* Replace with your header background image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.header-content {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for better readability */
+  max-width: 800px; /* Limit width of content */
+  min-width: 800px;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-grow: 1; /* Make sure content-wrapper takes the remaining space */
+  flex-direction: row; /* By default, make the nav and main sit side by side */
+}
+
+nav {
+  background-color: #563F1B;
+  flex-shrink: 0; /* Prevents nav from shrinking */
+  width: 200px; /* Fixed width for nav on larger screens */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Keep items stacked vertically */
+}
+
+nav ul li {
+  border-bottom: 1px solid #402f14;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+  color: #906a2e; /* Change color on hover */
+}
+
+main {
+  flex-grow: 1; /* Ensure main takes up remaining space */
+  padding: 1rem;
+  overflow: auto; /* Allow content overflow */
+}
+
+main {
+  flex-grow: 1; /* Ensure main takes up remaining space */
+  padding: 1rem;
+  overflow: auto; /* Allow content overflow */
+}
+
+footer {
+  background-color: #3e2e13;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0; /* Prevents footer from shrinking */
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Stack nav and main vertically */
+  }
+  
+  nav {
+    width: 100%; /* Nav takes full width on smaller screens */
+  }
+  
+  nav ul {
+    flex-direction: row; /* Horizontal nav items on smaller screens */
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet size styles */
+  header.header-background {
+    height: 250px; /* Adjust header height for tablets */
+  }
+  
+  .header-content {
+    padding: 1.5rem; /* Adjust padding for tablet */
+    max-width: 600px; /* Decrease max-width for tablet */
+  }
+  
+  .header-content h1 {
+    font-size: 2rem; /* Decrease font size for tablet */
+  }
+  
+  .header-content p {
+    font-size: 1rem; /* Decrease font size for tablet */
+  }
+  
+  nav {
+    width: 150px; /* Decrease nav width for tablet */
+  }
+  
+  nav ul li a {
+    padding: 0.8rem; /* Decrease padding for tablet */
+  }
+}

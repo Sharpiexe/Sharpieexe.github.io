@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Larian Studios</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header-background">
+        <div class="header-content">
+      <h1>Contact Us</h1>
+      <p>Got anything interesting to tell us? Then tell us!</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+        <nav>
+            <ul>
+              <li><a href="index.html">About</a></li>
+              <li><a href="games.html">Games & Awards</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>          
+      <main>
+        <section>
+          <h2>Contact Form</h2>
+          <form action="https://webdevbasics.net/scripts/demo.php" method="POST" id="contact-form">
+            <div class="form-group">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div><br>
+            <div class="form-group">
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div><br>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div><br>
+            <div class="form-group">
+              <label for="comments">Comments:</label>
+              <textarea id="comments" name="comments" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2024 Samuel Riendeau</p>
+    </footer>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
